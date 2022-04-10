@@ -1,0 +1,39 @@
+label {
+  display: block;
+  text-transform: uppercase;
+}
+.login__form {
+  min-width: 50%;
+
+  & input {
+    min-width: 40%;
+    padding: 0.5rem;
+    border-radius: $box-shadow;
+    outline: none;
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
+  }
+}
+
+.form-button {
+  @include buttonCommon;
+  background-clip: text;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include buttonCommonBefore;
+    content: "submit";
+  }
+  &:hover {
+    background-color: transparent;
+  }
+  &:hover::before {
+    transform: translateX(0);
+    transition: all 0.5s;
+  }
+}
+
+.login__form > div {
+  margin-bottom: 1.4rem;
+}

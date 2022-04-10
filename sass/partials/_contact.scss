@@ -1,0 +1,36 @@
+.contact__form {
+  width: 100%;
+  margin: 0 auto;
+
+  &--message h4 {
+    padding: 1.25rem;
+    color: $color-black;
+    display: inline-block;
+    border-radius: $box-shadow;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(30, end), blink-caret 5s step-end infinite;
+  }
+}
+
+.form__info {
+  margin-bottom: 1rem;
+
+  &--name {
+    letter-spacing: 2px;
+    text-shadow: $text-shadow;
+  }
+  &--input {
+    min-width: 60%;
+    padding: 0.5rem;
+    border-radius: $box-shadow;
+    outline: none;
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
+  }
+  &--error {
+    display: none;
+    color: $color-red;
+  }
+}
